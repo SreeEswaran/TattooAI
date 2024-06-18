@@ -1,3 +1,4 @@
+#For tattoo geneartion
 from diffusers import StableDiffusionPipeline
 
 def fine_tune_stable_diffusion(data_dir):
