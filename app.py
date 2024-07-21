@@ -15,8 +15,7 @@ model.eval()
 
 transform = transforms.Compose([
     transforms.Resize((256, 256)),
-    transforms.ToTensor()
-])
+    transforms.ToTensor() ])
 
 def simulate_tattoo_on_body(tattoo_design_path, body_image_path):
     tattoo_image = Image.open(tattoo_design_path)
