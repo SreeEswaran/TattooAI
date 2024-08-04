@@ -25,8 +25,7 @@ def simulate_tattoo_on_body(tattoo_design_path, body_image_path):
     body_tensor = transform(body_image).unsqueeze(0)
 
     with torch.no_grad():
-        simulated_tensor = model.generate(tattoo_tensor, body_tensor)
-    
+        simulated_tensor = model.generate(tattoo_tensor, body_tensor)    
     simulated_image = transforms.ToPILImage()(simulated_tensor.squeeze())
     simulated_image_path = "static/tattoo_on_body.png"
     simulated_image.save(simulated_image_path)
